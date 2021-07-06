@@ -8,7 +8,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Home Page</title>
+<title>Customer Home Page</title>
 <link rel="stylesheet" href="/portal/css/bootstrap.min.css">
 <link rel="stylesheet" href="/portal/css/name.css/" type="text/css" />
 <script src="/portal/js/bootstrap.min.js"></script>
@@ -21,7 +21,7 @@ body{
 </head>
 <body>
 	<%-- <jsp:include page="./common/nav.jsp" /> --%>
-	<%@ include file="common/header.jsp"%>
+	<%@ include file="common/header2.jsp"%>
 
 	<div class="container">
 
@@ -35,30 +35,19 @@ body{
 
 <div class="sub-container">
 		<div class="row">
-			<div class="col-lg-3">
-			<a href="/portal/customerloan">
-				<img class="image" src="/portal/image/img1.jpg" alt="Snow"
-					style="width: 250px; height: 250px;">
-					<p>Customer Loan Details</p></a>
+			<div class="col-lg-6">
+			<a href="/portal/applyloan">
+				<img class="image" src="/portal/image/applyLoanImage.jpg" alt="Snow"
+					style="width: 300px; height: 300px;">
+					<p>Apply For Loan</p></a>
 			</div>
-			<div class="col-lg-3">
-			<a href="/portal/savecollateral">
-				<img class="image" src="/portal/image/img3.jpg" alt="Mountains"
-					style="width: 250px; height: 250px;">
-					<p>Save the Collateral Details</p></a>
+			<div class="col-lg-6">
+			<a href="/portal/getLoanApplicationStatus">
+				<img class="image" src="/portal/image/loanStatusImage.jpg" alt="Mountains"
+					style="width: 300px; height: 300px;">
+					<p>View Loan Application Status</p></a>
 			</div>
-			<div class="col-lg-3">
-			<a href="/portal/riskassessment">
-				<img class="image" src="/portal/image/img2.jpg" alt="Forest"
-					style="width: 250px; height: 250px;">
-					<p>Risk Assessment</p></a>
-			</div>
-			<div class="col-lg-3">
-			<a href="/portal/getAll">
-				<img class="image" src="/portal/image/img6.png" alt="Caves"
-					style="width: 250px; height: 250px;">
-					<p>Accept/Reject Application</p></a>
-			</div>
+			
 			
 
 		</div>

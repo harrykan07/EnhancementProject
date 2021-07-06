@@ -9,7 +9,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Admin Login Page</title>
+<title>Login Page</title>
 <link rel="stylesheet"  href="/portal/css/bootstrap.min.css">
 <link rel="stylesheet" href="/portal/css/name.css/" type="text/css"/>
 <script src="/portal/js/bootstrap.min.js"></script>
@@ -17,47 +17,58 @@
 body{
 background-image: url("/portal/image/bank_background.jpg");
 }
+p{
+background-color: red;
+color: white;
+}
 </style>
 </head>
 <body>
 	<%@ include file="common/header1.jsp"%>
 
-	<div class="container">
+<div class="container">
 
-				<div class="login-container">
-					<%-- <spring:url value="/home" var="homePageLink"></spring:url>
-                ${homePageLink} --%>
-					
-						<h2><center>Admin Login Form</center></h2>
-						<spring:url value="/login" var="loginUrl"></spring:url>
-						<form:form method="post" modelAttribute="model"
-							action="${loginUrl}">
-							<spring:bind path="userName">
-								<div class="form-group ">
-									<label for="userName">Username</label>
-									<form:input path="userName" type="text"
-										class="form-control ${status.error ? 'is-invalid' : ''}"
-										id="userName" placeholder="Username" />
-									<form:errors path="userName" class="invalid-feedback" />
-								</div>
-							</spring:bind>
-							<spring:bind path="password">
-								<div class="form-group ">
-									<label for="password">Password</label>
-									<form:input path="password" type="password"
-										class="form-control ${status.error ? 'is-invalid' : ''}"
-										id="password" placeholder="Password" />
-									<form:errors path="password" class="invalid-feedback" />
-								</div>
-							</spring:bind>
-							<br></br>
-							<center>
-							<button type="submit" class="btn btn-light">Login</button></center>
-						</form:form>
-						<div class="error">${status}</div>
-					</div>
-				</div>
+	<!-- <h1>Activities</h1>  -->
+	<h1>
+	<!-- <button type="button" class="btn btn-primary btn-lg btn-block">ACTIVTIES</button> -->
+	<button type="button" class="btn btn-primary btn-lg btn-block">Login</button></h1>
+	<!-- <h1>
+		<a class="btn btn-deep-orange"><i class="fas fa-clone left"></i> Activities</a>
+		</h1> -->
+
+
+	<div class="sub-container">
+		<div class="row">
 		
+			<div class="col-lg-6">
+			<spring:url value="/loginAdmin" var="loginUrl"></spring:url>
+			<form:form method="get" modelAttribute="model"
+							action="${loginUrl}">
+			<center>
+				<img class="image" src="/portal/image/login.png" alt="Snow"
+					style="width: 300px; height: 300px;"><br>
+					<center>
+					<button type="submit" class="btn btn-light">Admin Login</button></center>
+			</form:form>
+			</div>
+		
+		
+			<div class="col-lg-6">
+			<spring:url value="/loginCustomer" var="loginUrl"></spring:url>
+			<form:form method="get" modelAttribute="model"
+							action="${loginUrl}">
+				<img class="image" src="/portal/image/login.png" alt="Mountains"
+					style="width: 300px; height: 300px;"><br>
+					<center>
+						<button type="submit" class="btn btn-light">Customer Login</button></center>
+			</form:form>
+			</div>
+		</div>
+
+		
+	</div>
+	</div>
+	
 			
 			<%@ include file="common/footer.jsp"%>
 </body>
